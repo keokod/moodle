@@ -1,4 +1,24 @@
 nécessite php7-mysql
+
+configurer nano /etc/mysql/my.cnf
+
+[client]
+default-character-set = utf8mb4
+
+[mysqld]
+innodb_file_format = Barracuda
+innodb_file_per_table = 1
+innodb_large_prefix
+
+character-set-server = utf8mb4
+collation-server = utf8mb4_unicode_ci
+skip-character-set-client-handshake
+
+[mysql]
+default-character-set = utf8mb4
+
+
+
 MariaDB [(none)]> MariaDB [_]> SELECT VERSION();
 ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'MariaDB [_]> SELECT VERSION()' at line 1
 MariaDB [(none)]> SELECT VERSION();
