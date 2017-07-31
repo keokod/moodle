@@ -55,4 +55,13 @@ modifier les occurence des chaines dans les fichier "Boost" par "Keo" (B en maju
 
 Si le nom de boost est déjà existant, lors de la liste des thèmes à choisir, le thème "keo" n'existera pas!
 
+pour vérifier que le scss foncionne remplaçons une valeur de couleur dans le menu déroulant dans le fichier _variables.scss
+(ligne 449) $dropdown-bg : red !defaut;
+vider le cache avec la commande
+/admin/cli$ php purge_caches.php
+
+aller à la page moodle et faître descendre un menu par exemple le langague, normalement vous devrier avoir un fond rouge du sous menu.
+
+
+
 
