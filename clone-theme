@@ -49,6 +49,10 @@ modifier le nom du thème "Boost" par "boost".
 puis dans le fichier config.php changer le nom du thème
 
 $THEME->name ='keo'
+
+modifier les occurence des chaines dans les fichier "Boost" par "Keo" (B en majuscule)
+
+
 Si le nom de boost est déjà existant, lors de la liste des thèmes à choisir, le thème "keo" n'existera pas!
 
 
