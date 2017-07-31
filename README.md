@@ -1,3 +1,74 @@
+
+nécessite php7-mysql
+
+configurer nano /etc/mysql/my.cnf
+
+[client]
+default-character-set = utf8mb4
+
+[mysqld]
+innodb_file_format = Barracuda
+innodb_file_per_table = 1
+innodb_large_prefix
+
+character-set-server = utf8mb4
+collation-server = utf8mb4_unicode_ci
+skip-character-set-client-handshake
+
+[mysql]
+default-character-set = utf8mb4
+
+
+
+MariaDB [(none)]> MariaDB [_]> SELECT VERSION();
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'MariaDB [_]> SELECT VERSION()' at line 1
+MariaDB [(none)]> SELECT VERSION();
++--------------------------+
+| VERSION()                |
++--------------------------+
+| 10.1.23-MariaDB-9+deb9u1 |
++--------------------------+
+1 row in set (0.00 sec)
+
+MariaDB [(none)]> SHOW VARIABLES LIKE 'innodb_file_format';
++--------------------+----------+
+| Variable_name      | Value    |
++--------------------+----------+
+| innodb_file_format | Antelope |
++--------------------+----------+
+1 row in set (0.00 sec)
+
+MariaDB [(none)]>  show variables like "%innodb_file%";
++--------------------------+----------+
+| Variable_name            | Value    |
++--------------------------+----------+
+| innodb_file_format       | Antelope |
+| innodb_file_format_check | ON       |
+| innodb_file_format_max   | Antelope |
+| innodb_file_per_table    | ON       |
++--------------------------+----------+
+4 rows in set (0.00 sec)
+
+MariaDB [(none)]> SET GLOBAL innodb_file_format = barracuda;
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [(none)]> show variables like "%innodb_file%";
++--------------------------+-----------+
+| Variable_name            | Value     |
++--------------------------+-----------+
+| innodb_file_format       | Barracuda |
+| innodb_file_format_check | ON        |
+| innodb_file_format_max   | Antelope  |
+| innodb_file_per_table    | ON        |
++--------------------------+-----------+
+4 rows in set (0.00 sec)
+
+MariaDB [(none)]> EXIT
+Bye
+
+
+_______________________________________________________________________________________________________________
+
 Pour un clonage rapide, il nous faut récupérer le dossier:
 
 /theme/boost
