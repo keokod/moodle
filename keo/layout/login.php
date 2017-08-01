@@ -17,7 +17,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * A login page layout for the boost theme.
+ * A login page layout for the keo theme.
  *
  * @package   theme_keo
  * @copyright 2016 Damyon Wiese

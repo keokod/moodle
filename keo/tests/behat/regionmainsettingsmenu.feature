@@ -1,6 +1,6 @@
 @javascript @theme_keo
 Feature: Region main settings menu
-  To navigate in boost theme I need to use the region main settings menu
+  To navigate in keo theme I need to use the region main settings menu
 
   Background:
     Given the following "courses" exist:
